@@ -3,14 +3,14 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+ const store = new Vuex.Store({
   state: {
     products: [
-      {name: 'Nike shoes', price: 150}
-      {name: 'Adidas shoes', price: 180}
-      {name: 'Puma shoes', price: 190}
-      {name: 'Flamino shoes', price: 130}
-      {name: 'Codesh shoes', price: 160}
+      {id: 1, name: 'Nike shoes', price: 150},
+      {id: 2, name: 'Adidas shoes', price: 180},
+      {id: 3, name: 'Puma shoes', price: 190},
+      {id: 4, name: 'Flamino shoes', price: 130},
+      {id: 5, name: 'Codesh shoes', price: 160}
     ]
   },
   getters: {
@@ -22,3 +22,4 @@ export default new Vuex.Store({
   modules: {
   }
 })
+export default store
