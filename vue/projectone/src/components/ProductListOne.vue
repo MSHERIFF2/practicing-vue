@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col">
         <h2 class="font-bold text-xl"> Product in Grid View </h2>
-        <ul class="flex justify-between items-center m-4 gap-8">
+        <ul class="  flex flex-wrap justify-between items-center m-4 gap-8">
             <li v-for="product in products" :key="product.id" class=" p-3  text-white bg-gray-500 flex flex-col" >
                 <span >{{ product.id }}</span>
                 <span >{{ product.name }}</span>
