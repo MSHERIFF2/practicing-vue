@@ -5,6 +5,8 @@ Vue.use(Vuex)
 
  const store = new Vuex.Store({
   state: {
+    
+    count: 0,
     products: [
       {id: 1, name: 'Nike shoes', price: 150},
       {id: 2, name: 'Adidas shoes', price: 180},
@@ -16,10 +18,13 @@ Vue.use(Vuex)
   getters: {
   },
   mutations: {
+    counter(state){
+      state.count++
+  }
   },
   actions: {
   },
   modules: {
   }
 })
-export default store
+export default store;
