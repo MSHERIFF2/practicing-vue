@@ -1,9 +1,6 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import { defineStore } from "pinia";
 
-Vue.use(Vuex)
-
- const store = new Vuex.Store({
+ const store = defineStore({
   state: {
     
     count: 0,
