@@ -1,35 +1,32 @@
 <template>
     <div>
-        <div>
-            <button @click="toggleDisplay" class=" mx-5 my-5 w-32 bg-green-400 text-white">{{ data.display ? 'List' :
-                'Grid'}}</button>
+        <transition name="fade">
+            <div v-if="show" class="p-32 bg-blue-300 text-center text-white transform">
+                <p class="text-xl">WELCOME TO LEZADA CLONE CLICK <span class="text-xl text-blue-900">
+                        <router-link to="/lezada">HERE...</router-link>
+                    </span> TO GET START</p>
+            </div>
+        </transition>
 
-        </div>
-        <div v-if="data.display">
-            <product-list-one />
 
-        </div>
-
-        <div v-else>
-            <product-list-two />
-        </div>
-        <div>
-        {{ Parent }}
     </div>
-    </div>
-   
+
 </template>
 <script setup>
-import ProductListOne from '@/components/ProductListOne.vue'
-import ProductListTwo from '@/components/ProductListTwo.vue'
-import Parent from '@/components/Parent.vue'
+import {ref, onMounted} from 'vue'
 
-    const data = ref({
-        display: true
-    })       
-        
-   const toggleDisplay = () => {
-            data.display.value = !data.display.value
-        }
-
+const show = ref(false)
+onMounted(()=>{
+    show.value=true
+})
 </script>
+<style scoped>
+
+.fade-enter-active, .fade-leave-active {
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+.fade-enter-from, .fade-leave-to {
+    transform: translateY(50px);
+    opacity: 0;
+}
+</style>

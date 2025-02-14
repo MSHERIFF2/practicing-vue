@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 
- const store = defineStore({
-  state: {
+ export const useStore = defineStore('main', {
+  state:() => ({
     
     count: 0,
     products: [
@@ -10,18 +10,15 @@ import { defineStore } from "pinia";
       {id: 3, name: 'Puma shoes', price: 190},
       {id: 4, name: 'Flamino shoes', price: 130},
       {id: 5, name: 'Codesh shoes', price: 160}
-    ]
+    ],
+  }),
+
+   actions: {
+    counter(){
+      this.count++
   },
-  getters: {
-  },
-  mutations: {
-    counter(state){
-      state.count++
-  }
-  },
-  actions: {
-  },
-  modules: {
-  }
-})
-export default store;
+},
+
+ });
+  
+

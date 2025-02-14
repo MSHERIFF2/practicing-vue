@@ -1,9 +1,10 @@
 
 import {createRouter, createWebHistory} from 'vue-router'
 import ProductView from '@/views/ProductView.vue'
+import Main from '@/components/Main.vue'
 
 
-Vue.use(VueRouter)
+
 
 const routes = [
   {
@@ -11,11 +12,16 @@ const routes = [
     name: 'ProductView',
     component:ProductView 
   },
+  {
+    path: '/lezada',
+    name: 'lazada',
+    component: Main
+  }
   
 ]
 
 const router = createRouter({
-  'history': createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
    routes
 })
 
