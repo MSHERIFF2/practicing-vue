@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "tw": "npx tailwindcss -i './public/input.css' -o './public/output.css' --watch"
+    "tw": "npx @tailwindcss/cli -i './public/input.css' -o './public/output.css' --watch"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.0.4",
