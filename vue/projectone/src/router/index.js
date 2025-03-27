@@ -16,11 +16,12 @@ const routes = [
   {
     path: '/user/:id',   
     component:UserProfile,
-    alias: '/u/:id'
+    alias: '/u/:id',
+   
   },
   {
     path: '/profile',
-    redirect: '/user/1'
+    redirect: '/user/9'
   },
   {
     path: '/dashboard',
